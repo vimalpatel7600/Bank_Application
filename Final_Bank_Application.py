@@ -145,6 +145,7 @@ class Bank:
    
 print(f"\n\n Welcome to {Bank.bankname}, {Bank.Branch}")
 b = Bank()
+accno = 100
 while True :
     ch = int(input('''
                    1. Add A New Account 
@@ -157,7 +158,7 @@ while True :
     if ch == 1 :
         username = input("Name : ")
         mobile = int(input("10 Digit Mobile No. : "))
-        accno = int(input("3 Digit of Account No. : "))
+        accno += 1
         b.UserAccount(username, mobile, accno)
         # print (f"Hello {username}, Your account is successfully created.")
 
